@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success! 🌹</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+  <style>
+    .paragraph {
+      font-size: 1.4rem;
+      margin: 2rem auto;
+      max-width: 600px;
+      color: #6B4F4F;
+      line-height: 1.8;
+      text-align: center;
+      min-height: 140px;
+    }
+    .celebration {
+      font-size: 5rem;
+      margin-top: 2rem;
+      animation: bounce 1s infinite alternate;
+    }
+    @keyframes bounce {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    .back a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #FFB6C1;
+      border-radius: 15px;
+      text-decoration: none;
+      color: #6B4F4F;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+    .back a:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body>
+
+<div class="decorations">
+  <span class="flower1">🌸</span>
+  <span class="flower2">🌼</span>
+  <span class="heart">💖</span>
+  <span class="bear">🧸</span>
+</div>
+
+<header>
+  <h1>🌹 Congratulations! 🌹</h1>
+</header>
+
+<div class="celebration">
+  🎉🌹🎉
+</div>
+
+<div class="paragraph" id="paragraph"></div>
+
+<div class="back">
+  <a href="index.html">⬅ Back to Home</a>
+</div>
+
+<script>
+  const text = "Yay! 🌹 You picked the magical Rose! Just like this flower, your heart is full of sweetness, warmth, and love. Every smile you share makes the world sparkle a little brighter, My Lady❤️. Keep being the adorable, kind, and lovely soul that you are, and let your happiness bloom like petals in the sunshine! 💖🌸✨";
+  const paragraph = document.getElementById("paragraph");
+  let index = 0;
+
+  function typeLetter() {
+    if (index < text.length) {
+      paragraph.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeLetter, 50);
+    }
+  }
+
+  typeLetter();
+</script>
+
+</body>
+</html>
